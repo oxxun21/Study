@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional statement</title>
+</head>
+<body>
+    <h1>조건문</h1>
+    <p>조건문이란 주어진 조건에 따라서 애플리케이션을 다르게 동작하도록 함</p>
+    <h2>if문</h2>
+    <pre>
+        if(true/false){};
+    </pre>
+    <p>if 가 true 이면 중괄호가 실행, false면 실행 X : boolean과 밀접한 관계 O</p>
+    <h2>if ~ else</h2>
+    <pre>
+        if(true){
+            실행 o ;
+        } else {
+            실행 x ;
+        } 
+
+        if(false){
+            실행 x ;
+        } else {
+            실행 o ;
+        }
+    </pre>
+    <p>if else 를 합쳐서 사용 가능</p>
+    <pre>
+        if(false) {
+            조건
+        } else if(true) {
+            앞쪽 if가 실행되지 않을 때 실행
+        } else if(true) {
+            위에 else if가 실행되지 않을 때 실행
+        } else {
+            위에 모든게 다 true면 마지막 조건 실행
+        }
+    </pre>
+    <h2>변수와 비교연산자</h2>
+    <pre>
+        if(a === 1){
+            괄호 안에 조건이 맞으면 실행
+        }
+    </pre>
+    <p><i>prompt는 사용자로부터 값을 입력받을 수 있음</i><br>
+    <i>alert는 경고창 생성</i></p>
+    <pre>
+        예시 1.
+        var id = prompt('아이디를 입력해주세요.');
+        if(id === 'egoing'){
+            var password = prompt('비밀번호를 입력해주세요');
+            if(password === '11111'){
+                alert('로그인 했습니다.'+ id + "님 반갑습니다.");
+            } else {
+                alert('비밀번호가 다릅니다.')
+            }                                       // if문 중첩
+        } else {
+            alert('아이디가 일치하지 않습니다.');
+        }
+    </pre>
+    <h2>논리 연산자</h2>
+    <p>&& (and) : 양쪽 항 모두 true</p>
+    <pre>
+        예시 2.
+        var id = prompt('아이디를 입력해주세요.');
+        var password = prompt('비밀번호를 입력해주세요');
+        if(id === 'egoing' && password === '11111'){
+                alert('로그인 했습니다.'+ id + "님 반갑습니다.");
+        } else {
+            alert('아이디가 일치하지 않습니다.');
+        }
+    </pre>
+    <p>|| (or) : 조건 중 하나라도 true면 true</p>
+    <p>! (not) : boolean의 값을 역전시킴, 부정의 의미</p>
+    <h2>boolean의 대체제</h2>
+    <p>숫자 1은 true, 0은 false : 조건에 넣진말고...</p>
+    <p>빈문자열, undefined, 변수에 값 할당 X, null, NaN 은 false</p>
+</body>
+</html>
