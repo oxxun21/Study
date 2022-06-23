@@ -1,0 +1,80 @@
+/* reset */
+* {margin: 0; padding: 0; font-size: 16px;}
+.clearfix::before , .clearfix::after {display: block; content: ''; clear: both;}
+a {color: #333; text-decoration: none;}
+li {list-style: none;}
+
+
+/* layout */
+#wrap {width: 1000px; margin: 0 auto; }
+
+/* header */
+#header h1 {float: left; padding: 20px 0 8px 0;}
+#header img {width: 120px; padding-left: 5px;}
+#header .nav {float: right;}
+#header .nav li {background: #ccc; float: left; position: relative; width: 155px; text-align: center;}
+#header .nav li a {display: block; font-size: 20px; font-weight: bold; padding: 24px 20px 20px 20px;}
+#header .nav li a:hover {background: rgba(0,0,0,0.3);}
+#header .nav li ul.subMenu {z-index: 1000; display: none; position: absolute; left: 0; top: 69px;}
+#header .nav li ul.subMenu li a {padding: 10px; background: #dadada;}
+#header .nav li ul.subMenu li a:hover {background: rgba(0,0,0,0.1);}
+
+/* banner */
+#banner {height: 389px; overflow: hidden; z-index: 500;}
+#banner img {width: 100%; display: block;}
+/* 슬라이드 상하
+#banner .slideList {position: relative; width: 1000px; height: 389px;}
+#banner .slideList .slideImg {position: relative;}
+#banner .slideList .slideImg h2 {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(0,0,0,0.4); color: #fff; padding: 10px 30px; border-radius: 25px;} 
+*/
+/* 슬라이드 좌우 */
+.slideList {width: 3000px; position: relative;}
+.slideList .slideImg {position: relative; width: 1000px; float: left;}
+.slideList .slideImg h2 {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: rgba(0,0,0,0.4); color: #fff; padding: 10px 30px; border-radius: 25px;}
+
+/* content1 */
+#content1 {margin-top: 20px;}
+#content1 .left {float: left; width: 49%; margin-right: 2%; 
+    background:  #f2f2f2 url(../Cookit/images/bg1.jpg) no-repeat right 20px center; 
+    background-size: 80px; padding: 20px; box-sizing: border-box;}
+#content1 .left h2 {font-size: 22px; padding-bottom: 5px;}
+#content1 .left p {padding-bottom: 15px; font-size: 14px; color: #666;}
+#content1 .left a {background: url(../Cookit/images/icon1.jpg) no-repeat left center;
+    background-size: 20px; padding-left: 25px;}
+
+#content1 .right {float: left; width: 49%; margin-right: 0%; 
+    background:  #f2f2f2 url(../Cookit/images/bg2.jpg) no-repeat right 20px center; 
+    background-size: 80px; padding: 20px; box-sizing: border-box}
+#content1 .right h2 {font-size: 22px; padding-bottom: 5px;}
+#content1 .right p {padding-bottom: 15px; font-size: 14px; color: #666;}
+#content1 .right a {background: url(../Cookit/images/icon2.jpg) no-repeat left center;
+     background-size: 20px; padding-left: 25px;}
+#content1 .right em {font-size: 13px; color: #999; font-style: normal;}
+
+/* content2 */
+#content2 {margin-top: 30px;}
+.tab-menu .tab-btn ul {overflow: hidden;}
+.tab-menu .tab-btn li {float: left; margin-right: 15px;}
+.tab-menu .tab-btn li a {display: block; color: #999; font-size: 20px; padding-bottom: 15px;}
+.tab-menu .tab-btn li.active a {color: #000; font-size: 24px; font-weight: bold;}
+.tab-menu .best figure {float: left; width: 32%; margin-right: 2%; font-weight: bold;}
+.tab-menu .best figure img {width: 100%;}
+.tab-menu .best figure:last-child {margin-right: 0;}
+.tab-menu .best figcaption {font-size: 18px; font-weight: bold; padding-top: 5px;}
+
+
+/* footer */
+#footer {padding: 20px 0; background: #202020; margin-top: 35px;}
+#footer h2 {float: left; padding-left: 20px;}
+#footer h2 img {width: 150px;}
+#footer .foot {float: right; padding-right: 30px;}
+#footer .foot ul {padding-bottom: 10px;}
+#footer .foot ul li {display: inline;}
+#footer .foot ul li a {color: #fff; padding-right: 10px;}
+#footer .foot address {font-style: normal; color: #ccc;}
+
+/* layer */
+.layer {display: none; z-index: 1100; position: absolute; left: 30px; top: 30px; width: 500px; height: 500px; border: 3px solid #000; background: #fff;}
+.layer h2 {padding: 20px; color: #000;}
+.layer .close {position: absolute; bottom: 20px; right: 20px;}
+.layer-bg {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;}
