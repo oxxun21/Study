@@ -9,6 +9,8 @@ body, input, textarea, select, button, table {font-family: 'Nanum Gothic', Apple
 
 dl, ul, li, ol, menu {list-style: none;}
 
+h1, h2, h3, h4, h5, h6 {font-size: 13px; color: #222; font-weight: normal;}
+
 .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
 .ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;} 
 .ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;} 
@@ -48,10 +50,10 @@ dl, ul, li, ol, menu {list-style: none;}
 
 
 /* contents */
-#cont_nav {}
-#cont_tit {width: 100%; height: 200px; background: #555;}
-#cont_ban {width: 100%; height: 200px; background: #666;}
-#cont_cont {width: 100%; height: 200px;  background: #777;}
+#cont_nav {background-color: #f6fdff;}
+#cont_tit {background-color: #EAF7FD;}
+#cont_ban {background-color: #dceff7;}
+#cont_cont {background-color: #f6fdff;}
 
 /* 전체 메뉴 */
 .nav {overflow: hidden; padding: 30px 0;}
@@ -62,5 +64,57 @@ dl, ul, li, ol, menu {list-style: none;}
 .nav > div ol li {float: left; width: 50%;}
 .nav > div ol li a:hover {text-decoration: underline;}
 .nav > div.last ol li {width: 100%;}
+
+/* title */
+.tit {position: relative;}
+.tit h2 {font-size: 40px; text-align: center; padding: 5px 0; letter-spacing: 2px; color: #2c94c4; font-family: 'Nanum Brush Script', cursive;}
+.tit .btn {position: absolute; top: 5px; right: 0; width: 60px; height: 60px; background: url(../webStandard/img/icon.png) no-repeat 0 -600px;}
+
+/* banner */
+.ban {position: relative; padding: 24px 0 20px 0;}
+.ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px; height: 43px; background: url(../webStandard/img/icon.png) no-repeat -150px 0;}
+.ban a.next {position: absolute; right: -80px; top: 60px;  width: 43px; height: 43px; background: url(../webStandard/img/icon.png) no-repeat -150px -43px;}
+.ban a.prev:hover {background-position: -193px 0;}
+.ban a.next:hover {background-position: -193px -43px;}
+
+.ban ul {overflow: hidden;}
+.ban ul li {float: left; width: 330px;}
+/* .ban ul li:nth-child(2) {text-align: center;} 
+.ban ul li:last-child {text-align: right;} */
+.ban ul li.ban_img1 {text-align: left;}
+.ban ul li.ban_img2 {text-align: center;}
+.ban ul li.ban_img3 {text-align: right;}
+.ban ul li img {border: 4px solid #dcdcdc;}
+.ban ul li img:hover {border-color: #98bcdc;}
+
+/* content */
+.cont {overflow: hidden; padding-top: 30px;}
+.cont .column {position: relative; float: left; width: 289px; height: 363px; margin: 0 30px 30px 0; padding-right: 30px;}
+.cont .col1 {border-right: 1px solid #c8c8c8;}
+.cont .col2 {border-right: 1px solid #c8c8c8;}
+.cont .col3 {margin-right: 0; padding-right: 0;}
+.cont .col4 {border-right: 1px solid #c8c8c8;}
+.cont .col5 {border-right: 1px solid #c8c8c8;}
+.cont .col6 {margin-right: 0; padding-right: 0;}
+
+.cont .column .ico_img {display: block; width: 60px; height: 60px; background: url(../webStandard/img/icon.png) no-repeat; position: absolute; left: 0; top: 0;}
+.cont .column .ico_tit {padding-left: 70px; font-size: 16px; color: #2c94c4;}
+.cont .column .ico_desc {padding-left: 70px; border-bottom: 1px solid #d0d0d0; padding-bottom: 15px;}
+
+.cont .col1 .ico_img {background-position: 0 -240px;}
+.cont .col2 .ico_img {background-position: 0 -300px;}
+.cont .col3 .ico_img {background-position: 0 -360px;}
+.cont .col4 .ico_img {background-position: 0 -420px;}
+.cont .col5 .ico_img {background-position: 0 -480px;}
+.cont .col6 .ico_img {background-position: 0 -540px;}
+
+.cont .col1 .ico_img:hover {background-position: -60px -240px;}
+.cont .col2 .ico_img:hover {background-position: -60px -300px;}
+.cont .col3 .ico_img:hover {background-position: -60px -360px;}
+.cont .col4 .ico_img:hover {background-position: -60px -420px;}
+.cont .col5 .ico_img:hover {background-position: -60px -480px;}
+.cont .col6 .ico_img:hover {background-position: -60px -540px;}
+
+
 
 /* footer */
