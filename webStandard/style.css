@@ -83,7 +83,7 @@ img, fieldset {border: 0 none;}
 .tit .btn.on {background-position: 0 -660px;}
 
 /* banner */
-.ban {position: relative; padding: 24px 0 20px;}
+.ban {position: relative; padding: 24px 0 40px;}
 .ban .slick-prev {position: absolute; left: -80px; top: 80px; width: 43px; height: 43px; background: #ccc; background: url(../webStandard/img/icon.png) no-repeat -150px 0; text-indent: -9999px;}
 .ban .slick-next {position: absolute; right: -80px; top: 80px; width: 43px; height: 43px; background: #ccc; background: url(../webStandard/img/icon.png) no-repeat -150px -43px; text-indent: -9999px;}
 .ban .slick-prev:hover {background-position: -193px 0;}
@@ -95,19 +95,6 @@ img, fieldset {border: 0 none;}
 .ban .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
 .ban .slick-dots li button {font-size: 0; line-height: 0; display: block; width: 15px; height: 15px; cursor: pointer; background: #5dbfeb; border-radius: 50%;}
 .ban .slick-dots li.slick-active button {background: #2b91c8;}
-
-/* .ban {position: relative; padding: 24px 0 20px 0;}
-.ban a.prev {position: absolute; left: -80px; top: 60px; width: 43px; height: 43px; background: url(../webStandard/img/icon.png) no-repeat -150px 0;}
-.ban a.next {position: absolute; right: -80px; top: 60px;  width: 43px; height: 43px; background: url(../webStandard/img/icon.png) no-repeat -150px -43px;}
-.ban a.prev:hover {background-position: -193px 0;}
-.ban a.next:hover {background-position: -193px -43px;}
-.ban ul {overflow: hidden;}
-.ban ul li {float: left; width: 330px;}
-.ban ul li.ban_img1 {text-align: left;}
-.ban ul li.ban_img2 {text-align: center;}
-.ban ul li.ban_img3 {text-align: right;}
-.ban ul li img {border: 4px solid #dcdcdc;}
-.ban ul li img:hover {border-color: #98bcdc;} */
 
 /* content */
 .cont {overflow: hidden; padding-top: 30px;}
@@ -205,24 +192,21 @@ img, fieldset {border: 0 none;}
 .notice4 a.more {position: absolute; right: 9px; top: 9px;}
 
 /* 갤러리 */
-.gallery {border: 1px solid #ccc; height: 254px; position: relative; overflow: hidden;}
+.gallery {border: 1px solid #ccc; height: 255px; overflow: hidden; position: relative;}
 .gallery h4 {font-size: 14px; color: #0093bd; border-bottom: 1px solid #ccc; padding: 10px 0 8px 11px; font-weight: bold;}
 .gallery .gallery_btn {position: absolute; right: 5px; top: 7px;}
-.gallery .gallery_btn ul {overflow: hidden;}
-.gallery .gallery_btn ul li {float: left; margin: 1px 2px;}
-.gallery .gallery_btn ul li a {display: block; width: 23px; height: 23px; background: url(../webStandard/img/icon.png) no-repeat;}
-
-.gallery .gallery_btn ul li.gb_icon1 a {background-position: -150px -120px;}
-.gallery .gallery_btn ul li.gb_icon2 a {background-position: -150px -143px;}
-.gallery .gallery_btn ul li.gb_icon3 a {background-position: -150px -166px;}
-.gallery .gallery_btn ul li.gb_icon4 a {background-position: -150px -189px;}
-
-.gallery .gallery_btn ul li.gb_icon1 a:hover {background-position: -173px -120px;}
-.gallery .gallery_btn ul li.gb_icon2 a:hover {background-position: -173px -143px;}
-.gallery .gallery_btn ul li.gb_icon3 a:hover {background-position: -173px -166px;}
-.gallery .gallery_btn ul li.gb_icon4 a:hover {background-position: -173px -189px;}
 
 .gallery .gallery_img img {width: 100%;}
+
+.gallery .gallery_btn button {float: left; margin: 1px 2px; display: block; width: 23px; height: 23px; background: url(../webStandard/img/icon.png) no-repeat;}
+.gallery .gallery_btn .gb_icon1 {background-position: -150px -120px;}
+.gallery .gallery_btn .gb_icon2 {background-position: -150px -143px;}
+.gallery .gallery_btn .gb_icon3 {background-position: -150px -166px;}
+.gallery .gallery_btn .gb_icon4 {background-position: -150px -189px;}
+.gallery .gallery_btn .gb_icon1:hover {background-position: -173px -120px;}
+.gallery .gallery_btn .gb_icon2:hover {background-position: -173px -143px;}
+.gallery .gallery_btn .gb_icon3:hover {background-position: -173px -166px;}
+.gallery .gallery_btn .gb_icon4:hover {background-position: -173px -189px;}
 
 /* 로그인 */
 #login_form {background: #f2f4f5; padding: 15px;}
@@ -253,8 +237,8 @@ img, fieldset {border: 0 none;}
 .footer ul li::before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
 .footer ul li:first-child:before {width: 0; height: 0;} 
 
-
-
-
-
-
+/* layer popup */
+#layer {display: none; position: fixed; left: 50px; top: 50px; width: 700px; border: 10px solid #dceff7; box-shadow: 3px 10px rgba(0, 0, 0, 0.4);}
+#layer img {width: 100%; display: block;}
+#layer .close {position: absolute; right: 20px; top: 20px; background: #0093bd; padding: 1px 6px; color: #fff;}
+#layer .close:hover {text-decoration: underline;}
