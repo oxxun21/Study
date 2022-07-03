@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP, 생성자/new</title>
+</head>
+<body>
+    <h1>객체 지향 프로그래밍</h1>
+    <p>object-oriented Programming</p>
+    <p>로직을 상태(status)와 행위(behave)로 이루어진 객체로 만드는 것</p>
+
+    <p>추상화 abstract : 해결할 문제, 반영할 것을 소프트웨어적으로 단순화 시켜서 만드는 행위</p>
+
+    <p>부품화 : ex) 메소드들은 연관되어 있는 로직들을 결합하여 완제품을 만든다. 
+    <br /> 또, 이 메소드들을 부품으로해서 하나의 독립된 프로그램을 만드는데 이러한 방법을 사용하면 코드의 양을 줄일 수 있고, 
+    <br /> 메소드 별로 기능을 분류할 수 있어 코드 찾기도 편리하고 문제 진단도 빨라진다.</p>
+    <p>연관된 메소드와 그 메소드가 사용하는 변수들을 분류하고 그룹핑하는 것이 객체 지향의 핵심이다.</p>
+
+    <p>부품화는 동일한 기능을 하는 메소드와 변수를 그룹핑을 하는 것이 아닌, 내부의 동작 방법을 객체 안으로 숨기고 사용자에게는 그 부품의 사용방법만을 노출하는 것이다.
+    <br /> 이러한 컨셉을 정보의 은닉화(Information Hiding), 캡슐화(Encapsulation)이라고 한다.</p>
+
+    <p>인터페이스 Interface : 부품들 간의 약속, 연결점</p>
+
+    <h1>생성자와 new</h1>
+    <p>객체? 서로 연관된 변수와 함수를 그룹핑한 그릇, 객체 내의 변수를 프로퍼티(property) / 함수를 메소드(method)라고 함</p>
+    <p>객체를 만들 때는 { } 중괄호를 사용</p>
+    <script type="text/javascript">
+        let person1 = {}
+        person1.name = 'oxxun';
+        person1.introduce = function(){
+            return 'My name is '+this.name;
+        };
+        document.write(person1.introduce());
+
+        let person2 = {
+            'name' : 'oxxun',
+            'introduce' : function(){
+                return 'My name is '+this.name;
+            }
+        }
+        document.write(person2.introduce());
+        // introduce 부분이 중복 > 중복을 제거해야함 > 생성자, new 활용
+    </script>
+
+    <p>생성자 constructor : 객체를 만드는 역할을 하는 함수</p>
+    <script type="text/javascript">
+        function person3 (){
+            let p = new Person();   // new는 비어있는 객체를 생성하게 됨 (생성자)
+            p.name = 'oxxun';
+            p.introduce = function(){
+                return 'My name is'+this.name;
+            }
+        }
+        // 개선 X
+
+        function Person4 (name){
+            this.name = name;
+            this.introduce = function (){
+                return 'My name is '+this.name;
+            }       // 이 과정을 객체 "초기화 init" 한다고 함
+        }
+        let p1 = new Person4('oxxun');
+        document.write (p1.introduce()+"<br />");
+
+        let p2 = new Person4('oxxun_____^');
+        document.write (p2.introduce());
+
+        // 중복 제거 introduce를 한 번만 정의하고 계속해서 사용 가능
+    </script>
+    <p></p>
+</body>
+</html>
