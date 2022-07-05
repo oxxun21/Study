@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+</head>
+<body>
+    <h1>상속</h1>
+    <p>객체의 로직을 그대로 물려 받는 또 다른 객체를 만들 수 있는 기능 : 기존의 로직을 수정하고 변경해서 파생된 새로운 객체를 만들 수 있게 해줌</p>
+    <p>로직의 재활용이 용이해짐</p>
+    
+    <h1>프로토타입</h1>
+    <p>객체의 원형, 객체는 프로퍼티를 가질 수 있는데 prototype이라는 프로퍼티는 그 용도가 약속되어 있음</p>
+    <p>prototype에 저장된 속성들은 생성자를 통해서 객체가 만들어질 때 그 객체에 연결됨</p>
+
+    <p>Super를 상속받고 싶다면 sub에 할당된 객체는 상속받고자 하는 객체를 sub에 넣어야한다.</p>
+    <p>객체를 상속받을 때는 상속받고자 하는 객체의 prototype을 사용하면 안되고 prototype의 복제본을 객체로 사용해야한다.</p>
+
+    <script type="text/javascript">
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+        function Super(){}
+        Super.prototype = new Ultra();
+        function Sub(){}
+        Sub.prototype = new Super();
+
+        let o = new Sub();
+        console.log(o.ultraProp);
+        // true
+        // prototype chain
+
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+        function Super(){}
+        Super.prototype = new Ultra();
+        function Sub(){}
+        Sub.prototype = new Super();
+
+        let ob = new Sub();
+        ob.ultraProp = 1;
+        console.log(ob.ultraProp);
+        // 1
+
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+        function Super(){}
+        Super.prototype = new Ultra();
+        function Sub(){}
+        Sub.prototype = new Super();
+        Sub.prototype.ultraProp = 2;
+
+        let obj = new Sub();
+        console.log(obj.ultraProp);
+        // 2
+
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        Super.prototype = new Ultra();
+
+        function Sub(){}
+        let s = new Super();
+        Sub.prototype = 3;
+
+        let obje = new Sub();
+        console.log(obje.ultraProp);
+        // 3
+
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        let t = new Ultra();
+        t.ultraProp = 4;
+        Super.prototype = t;
+
+        function Sub(){}
+        let su = new Super();
+        Sub.prototype = 3;
+
+        let objec = new Sub();
+        console.log(objec.ultraProp);
+        // 4
+
+        function Ultra(){}
+        Ultra.prototype.ultraProp = true;
+
+        function Super(){}
+        let t = new Ultra();
+        Super.prototype = t;
+
+        function Sub(){}
+        let sup = new Super();
+        Sub.prototype = 3;
+
+        let object = new Sub();
+        console.log(object.ultraProp);
+        // true
+    </script>
+</body>
+</html>
