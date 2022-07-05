@@ -56,11 +56,16 @@
         // };
 
         const onClickNumber = (event) => {
-            if(operator){   // 비어있지 않다
-                numTwo += event.target.textContent;
-            } else {    // 비어있다
+            if(!operator){   // 비어있다
                 numOne += event.target.textContent;
+                $result.value += event.target.textContent;
+                return;
             }
+            // 비어있지 않다
+            if (!numTwo) {
+                $result.value ='';
+            }
+            numTwo += event.target.textContent;
             $result.value += event.target.textContent;
         };
         
