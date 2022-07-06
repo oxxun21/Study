@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="hello">하잉</h2>
+    <h2 id="hi">안녕</h2>
+
+    <script>
+        document.getElementById('hello').innerHTML = '안녕하세요';
+        // 웹문서.html요소가져와('hello').내부글자
+        //      .바꾸고 싶은 htnl요소의 id.뭐바꿀지 = 어케바꿀지
+        //document.getElementById('hello') : 셀렉터 selector
+        document.getElementById('hi').innerHTML = '올때 메로나';
+        document.getElementById('hi').style.fontSize = '30px';
+    </script>
+</body>
+</html>
