@@ -65,5 +65,30 @@
     
     <h2>객체지향 알아보기</h2>
     <p>this : 생성한 변수를 가르키는 약속된 변수</p>
+
+    <h1>object 객체</h1>
+    <script>
+        //Object.keys()
+        let arr = ['a','b','c'];
+        console.log('Object.keys(arr)',Object.keys(arr));   // alert ['0,1,2']
+
+        //Object.prototype.toString()
+        let o = new Object();
+        console.log('o.toString()', o.toString());
+
+        let a = new Array(1,2,3);
+        console.log('a.toString()', a.toString());
+    </script>
+    <p>prototype이 있는 것은 어떠한 객체를 만들고, 객체를 담고 있는 식별자 뒤에 메소드(.toString) 입력</p>
+    <p>Object.~~() : 인자를 받아서 값을 처리, 이때 Object는 생성자 함수</p>
+
+    <!-- 보충
+    prototype에 속해있는 toString의 경우 arr.toString()으로 호출할 수 있습니다. 
+    이는 모든 객체가 Object를 암시적으로 상속받고 있기 때문에 Object객체의 
+    prototype에 속해있는 toString() 메서드를 새롭게 만든 배열 객체에서도 호출하여 사용할 수 있는 것입니다.
+
+    하지만 keys() 메서드의 경우 prototype에 속해있지 않고 메서드로서 존재합니다. 
+    우리가 객체를 상속할 때 하위 객체의 prototype에 new를 통해 상위 객체의 prototype 정보를 복사하여 할당해줍니다. 
+    즉 prototype에 속해있지 않은 keys의 경우 해당 메서드가 다른 객체의 prototype에 할당되지 않아 arr.keys(arr)로 호출이 불가능한 것입니다.-->
 </body>
 </html>
