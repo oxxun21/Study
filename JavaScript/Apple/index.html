@@ -5,18 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <style>
+    .alert-box {
+        background: rgb(149, 149, 255);
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        display: none;
+    }
+    </style>
 </head>
 <body>
-    <h2 id="hello">하잉</h2>
-    <h2 id="hi">안녕</h2>
+    <div class="alert-box" id="alert">
+        <p id="title">alert box</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="alert('아이디 줘')">버튼 하나</button>
+    <button onclick="alert('비번 줘')">버튼 둘</button>
 
-    <script>
-        document.getElementById('hello').innerHTML = '안녕하세요';
-        // 웹문서.html요소가져와('hello').내부글자
-        //      .바꾸고 싶은 htnl요소의 id.뭐바꿀지 = 어케바꿀지
-        //document.getElementById('hello') : 셀렉터 selector
-        document.getElementById('hi').innerHTML = '올때 메로나';
-        document.getElementById('hi').style.fontSize = '30px';
+
+    <!-- document.getElementById('hello').innerHTML = '안녕하세요';
+    웹문서.html요소가져와('hello').내부글자
+    .바꾸고 싶은 htnl요소의 id.뭐바꿀지 = 어케바꿀지
+    document.getElementById('hello') : 셀렉터 selector  -->
+
+    <script type="text/javascript">
+        function alert(para){
+            document.getElementById('title').innerHTML = para;
+            document.getElementById('alert').style.display = 'block';
+        }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+        // addEventListener : 왼쪽꺼 '??'('click')되면 함수 실행해줘
+
+        // function boxClose(){
+        //     document.getElementById('alert').style.display = 'none';
+        // }
     </script>
 </body>
 </html>
