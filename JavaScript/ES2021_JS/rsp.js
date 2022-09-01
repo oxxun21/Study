@@ -27,4 +27,21 @@ const changeComputerHand = () => {
     $computer.style.backgroundSize = 'auto 200px';
 }
 
-setInterval(changeComputerHand, 50);
+let intervalId =  setInterval(changeComputerHand, 50);
+
+let clickable = true;
+const clickButton = () => {
+    if (clickable) {
+        clearInterval(intervalId);
+        clickable = false;
+        // 점수 계산 및 화면 표시
+        setTimeout(() => {  // setTimeout은 삭제 X > 버그 발생
+            clearInterval(intervalId);
+            intervalId = setInterval(changeComputerHand, 50);
+        }, 1000);
+    } 
+};
+
+$rock.addEventListener('click', clickButton);
+$scissors.addEventListener('click', clickButton);
+$paper.addEventListener('click', clickButton);
