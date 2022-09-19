@@ -9,13 +9,14 @@
 </ul>
 : HTML, CSS, JS를 이해하고 사용법을 익히기 위해 클론 코딩을 이용한 기본적인 웹페이지 구현
 
-<br/>
+---
+
 <ul>
   <li>webStandard</li>
 </ul>
 : 웹 표준에 맞추어 만든 퍼블리싱 포트폴리오
 <br/>
-with [webstoryboy YouTube](https://github.com/webstoryboy)
+with [webstoryboy_YouTube](https://github.com/webstoryboy)
 
 ### 📚 ES2021_JS
 
