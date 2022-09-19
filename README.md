@@ -8,9 +8,6 @@
   <li>정부24</li>
 </ul>
 : HTML, CSS, JS를 이해하고 사용법을 익히기 위해 클론 코딩을 이용한 기본적인 웹페이지 구현
-
----
-
 <ul>
   <li>webStandard</li>
 </ul>
