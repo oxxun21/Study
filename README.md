@@ -12,7 +12,7 @@
   <li>webStandard</li>
 </ul>
 : 웹 표준에 맞추어 만든 퍼블리싱 포트폴리오
-with [webstoryboy YouTube] (https://github.com/webstoryboy)
+with [webstoryboy YouTube](https://github.com/webstoryboy)
 
 ### 📚 ES2021_js
 
