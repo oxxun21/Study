@@ -13,7 +13,7 @@
   <li>webStandard</li>
 </ul>
 <br/>
-with [webstoryboy_YouTube](https://github.com/webstoryboy)
+with [webstoryboy](https://github.com/webstoryboy)
 
 ### 📚 ES2021_JS
 
